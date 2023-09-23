@@ -2,3 +2,7 @@ html body
 {
     background: url(https://htmlcolorcodes.com/assets/images/colors/dark-red-color-solid-background-1920x1080.png);
 }
+
+.a:hover, .a:active {
+    background-color: #1cc995;
+  }
