@@ -3,27 +3,26 @@
     "name": "Email Link Risk Analyzer",
     "version": "1.0",
     "description": "This extension analyzes links in your browser to identify its level of risk",
-    "icons": {
-        "16": "/images/icon16.png",
-        "48": "/images/icon48.png",
-        "128": "/images/icon128.png"
-    },
-    "permissions": [
-        "activeTab",
-        "https://mail.google.com/",
-        "https://*/*" 
-      ],
+    "content_scripts": [{
+        "matches": ["https://mail.google.com/*"],
+        "css": ["main.css"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+    }],
+    "permissions": ["activeTab"],
     "action": {
         "default_icon": {
         "16": "/images/icon16.png",
         "48": "/images/icon48.png",
         "128": "/images/icon128.png"
-        }
+        },
+        "default_popup": "popup.html"
     },
-    "content_scripts": [{
-        "matches": ["https://mail.google.com/"],
-        "css": ["main.css"],
-        "js": ["content.js"]
-    }]
+    "icons": {
+        "16": "/images/icon16.png",
+        "48": "/images/icon48.png",
+        "128": "/images/icon128.png"
+    }
+
   }
   
