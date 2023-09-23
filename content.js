@@ -1,2 +1,2 @@
-const a = document.querySelector("a");
+const a = document.querySelector("a").href;
 alert(a);
