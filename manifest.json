@@ -3,6 +3,13 @@
     "name": "Email Link Risk Analyzer",
     "version": "1.0",
     "description": "This extension analyzes links in your browser to identify its level of risk",
+    "permissions": [
+        "activeTab",
+        "webRequest",
+        "activeTab",
+        "storage",
+        "tabs"
+      ],      
     "icons": {
         "16": "/images/icon16.png",
         "48": "/images/icon48.png",
