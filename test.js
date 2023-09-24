@@ -1,21 +1,13 @@
-const axios = require("axios")
+'use strict';
 
-axios.post("https://safebrowsing.googleapis.com/v4/threatMatches:find?key=AIzaSyBi5CsGvLUKIRuBufchW05k_Pr1Hl0OTMQ", {
-    client: 
-    {
-        clientId: 'yourcompanyname',
-        clientVersion: '1.5.2'
-    },
-    threatInfo: 
-    {
-        threatTypes: ['MALWARE','SOCIAL_ENGINEERING'],
-        platformTypes: ['WINDOWS'],
-        threatEntryTypes: ['URL'],
-        threatEntries:
-        [{url: 'https://www.google.com/'}]
-    }
+// require('safe-browse-url-lookup')
+const lookup = require('./lib')({ apiKey: 'AIzaSyBi5CsGvLUKIRuBufchW05k_Pr1Hl0OTMQ' });
 
-})
-    .then((response) => {
-        console.log(response)
+lookup.checkSingle('http://testsafebrowsing.appspot.com/apiv4/ANY_PLATFORM/MALWARE/URL/')
+    .then(isMalicious => {
+        console.log(isMalicious ? 'Hands off! This URL is evil!' : 'Everything\'s safe.');
     })
+    .catch(err => {
+        console.log('Something went wrong.');
+        console.log(err);
+    });

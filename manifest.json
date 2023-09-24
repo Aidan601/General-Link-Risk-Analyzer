@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Email Link Risk Analyzer",
+    "name": "Link Risk Analyzer",
     "version": "1.0",
     "description": "This extension analyzes links in your browser to identify its level of risk",
     "icons": {
