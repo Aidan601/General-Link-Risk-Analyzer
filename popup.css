@@ -1,0 +1,26 @@
+/* popup.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 10px;
+}
+
+.popup-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #6a0a0a;
+    border: 1px solid #9c2929;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+p {
+    font-size: 14px;
+    margin: 5px 0;
+}
